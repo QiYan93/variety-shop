@@ -1,8 +1,9 @@
 <template>
   <div class="hello">
+    <img src="../assets/logo.png">
     <h1>{{ msg }}</h1>
     <ul>
-      <li><a href="http://qiyan93.com" target="_blank">砀山站</a></li>
+      <li><router-link to="dangshan">砀山站</router-link></li>
       <li><a href="https://weidian.com/?userid=1160158592&wfr=wx_profile" target="_blank">建水站</a></li>
       <li><a href="https://gitter.im/vuejs/vue" target="_blank">自由站</a></li>
       <li><a href="https://weidian.com/?userid=1160158592&wfr=wx_profile" target="_blank">植物图鉴</a></li>
@@ -26,6 +27,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.hello{
+  text-align: center;
+}
 h1, h2 {
   font-weight: normal;
 }
