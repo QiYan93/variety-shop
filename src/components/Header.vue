@@ -1,40 +1,42 @@
 <template>
-    <div class="header">
-        <div class="userInfo">
-            <div class="left">
-                <span>您好，欢迎来到杂货铺</span>
-            </div>
-            <div class="right">
-                <span class="userName">
-                    qiyan93
-                </span>
-                <span class="logout">
-                    退出
-                </span>
-            </div>
-        </div>
-        <nav class="navbar-static-top">
-            <ul class="nav nav-tabs" style="max-width: 1200px;min-width: 1000px">
-                <li role="presentation" class="active"><a href="#">Home</a></li>
-                <li role="presentation"><a href="#">Profile</a></li>
-                <li role="presentation"><a href="#">Messages</a></li>
-            </ul>
-        </nav>
+    <div class="navbar-fixed-top header">
+        <ul class="nav nav-tabs nav-ul">
+            <li role="presentation" class="brand"><a href="#">您好，欢迎来到杂货铺</a></li>
+            <li role="presentation" :class="[isActive==='dangshan' ? 'active' : '']" @click="setActive('dangshan')"><a href="#">砀山站</a></li>
+            <li role="presentation" :class="[isActive==='jianshui' ? 'active' : '']" @click="setActive('jianshui')"><a href="#">建水站</a></li>
+            <li role="presentation" :class="[isActive==='freedom' ? 'active' : '']" @click="setActive('freedom')"><a href="#">自由站</a></li>
+        </ul>
     </div>
 </template>
 
+<script>
+    export default {
+        name:'header',
+        data(){
+            return {
+                isActive:'dangshan'
+            }
+        },
+        methods:{
+            setActive(type){
+                if(type !== this.isActive){
+                    this.isActive = type;
+                }
+            }
+        }
+    }
+</script>
 <style lang="scss">
     .header{
-        display: inline-block;
         width: 100%;
-        .userInfo{
-            display:inline-block;
-            width:100%;
-            .left{
-                float: left;
-            }
-            .right{
-                float: right;
+        background: #045bb2;
+        .nav-ul{
+            max-width: 1200px;
+            min-width: 1000px;
+            margin: auto;
+            border:none;
+            .brand{
+                margin-right: 25px;
             }
         }
     }

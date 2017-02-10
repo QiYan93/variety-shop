@@ -1,19 +1,16 @@
 <template>
   <div id="app">
-    <Header></Header>
     <router-view></router-view>
-    <Footer></Footer>
+    <Bottom></Bottom>
   </div>
 </template>
 
 <script>
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Bottom from './components/Footer'
 export default {
   name: 'app',
   components:{
-    Header,
-    Footer
+    Bottom
   }
 }
 </script>
@@ -26,7 +23,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   /*text-align: center;*/
   color: #2c3e50;
-  background: #f2f2f2;
+  background: #f1f2f3;
   /*margin-top: 60px;*/
 }
 </style>
