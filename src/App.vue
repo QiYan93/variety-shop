@@ -1,23 +1,29 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view></router-view>
+    <Bottom></Bottom>
   </div>
 </template>
 
 <script>
+import Bottom from './components/Footer'
 export default {
-  name: 'app'
+  name: 'app',
+  components:{
+    Bottom
+  }
 }
 </script>
 
 <style>
 #app {
+  height: 100%;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /*text-align: center;*/
   color: #2c3e50;
-  margin-top: 60px;
+  background: #f2f2f2;
+  /*margin-top: 60px;*/
 }
 </style>
